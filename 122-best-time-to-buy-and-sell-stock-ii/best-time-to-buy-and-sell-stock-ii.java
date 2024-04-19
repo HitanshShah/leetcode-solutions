@@ -11,7 +11,6 @@ class Solution {
                 ans += prices[i] - prices[ptr];
                 ptr = i;
             }
-            System.out.println(ptr + " " + i + " " + ans);
         }
         return ans;
     }
