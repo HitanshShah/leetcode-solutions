@@ -8,17 +8,12 @@ class Solution {
                 p1 = p2;
                 p2++;
             }else{
-                if(p2+1 < prices.length){
-                    if(prices[p2] <= prices[p2+1]) p2++;
-                    else{
-                        ans += prices[p2] - prices[p1];
-                        p1 = p2+1;
-                        p2 = p2+2;
-                    }
-                }else{
-                    ans += prices[p2] - prices[p1];
+                while(p2+1 < prices.length && prices[p2] < prices[p2+1]){
                     p2++;
                 }
+                ans += prices[p2] - prices[p1];
+                p1=p2;
+                p2++;
             }
             System.out.println(p2);
         }
