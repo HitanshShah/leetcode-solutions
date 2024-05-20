@@ -32,13 +32,13 @@ class Solution {
             // }
             // if(counter>1) return false;
             TreeNode curr = q.poll();
-            if(counter > 0 && curr!=null) return false;
             if(curr == null){
                 counter++;
-                continue;
+            }else{
+                if(counter > 0) return false;
+                q.add(curr.left);
+                q.add(curr.right);
             }
-            q.add(curr.left);
-            q.add(curr.right);
         }
         return true;
     }
