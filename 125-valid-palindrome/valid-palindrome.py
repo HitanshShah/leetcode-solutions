@@ -6,14 +6,15 @@ class Solution:
         # else:
         #     return False
         start, end = 0, len(s)-1
+        a = s.lower()
         while start < end:
-            if not s[start].isalnum():
+            if not a[start].isalnum():
                 start+=1
                 continue
-            if not s[end].isalnum():
+            if not a[end].isalnum():
                 end-=1
                 continue
-            if s[start].lower() != s[end].lower():
+            if a[start] != a[end]:
                 return False
             else:
                 start+=1
