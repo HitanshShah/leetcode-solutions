@@ -10,13 +10,12 @@ class Solution:
         while start < end:
             if not a[start].isalnum():
                 start+=1
-                continue
-            if not a[end].isalnum():
+            elif not a[end].isalnum():
                 end-=1
-                continue
-            if a[start] != a[end]:
-                return False
-            else:
+            elif a[start] == a[end]:
                 start+=1
                 end-=1
+                # return False
+            else:
+                return False
         return True
