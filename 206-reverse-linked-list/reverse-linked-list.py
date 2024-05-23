@@ -13,5 +13,4 @@ class Solution:
             current.next = tempnode.next
             tempnode.next = head
             head = tempnode
-            print(head.val)
         return head
