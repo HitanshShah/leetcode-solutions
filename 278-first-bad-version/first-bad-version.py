@@ -8,7 +8,6 @@ class Solution:
         first_bad = 0
         while start <= end:
             mid = (start + end)//2
-            # print(mid)
             if isBadVersion(mid):
                 first_bad = mid
                 end = mid-1
