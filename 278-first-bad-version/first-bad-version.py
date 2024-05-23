@@ -9,9 +9,9 @@ class Solution:
         while start <= end:
             mid = (start + end)//2
             # print(mid)
-            if not isBadVersion(mid):
-                start = mid+1
-            else:
+            if isBadVersion(mid):
                 first_bad = mid
                 end = mid-1
+            else:
+                start = mid+1
         return first_bad
