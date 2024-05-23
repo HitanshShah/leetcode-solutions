@@ -6,10 +6,10 @@ class Solution:
         start = 1
         end = n
         first_bad = 0
-        while(start <= end):
+        while start <= end:
             mid = (start + end)//2
             # print(mid)
-            if(not isBadVersion(mid)):
+            if not isBadVersion(mid):
                 start = mid+1
             else:
                 first_bad = mid
