@@ -14,6 +14,5 @@ class Solution:
             val += carry
             carry = val//2
             val = val%2
-            print(str(val))
             ans = ans + str(val)
         return "".join(reversed(ans))
