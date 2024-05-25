@@ -4,7 +4,6 @@ class Solution:
         for num in nums:
             if num in nums_set:
                 return True
-                nums_set.add(num)
             nums_set.add(num)
         return False
 
