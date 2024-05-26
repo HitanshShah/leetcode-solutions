@@ -15,9 +15,14 @@ class Solution:
         #     if i != nums[i]:
         #         return i
         # return len(nums)
+
+
+        # n = len(nums)
+        # target = (n*(n+1))//2
+        # sums = 0
+        # for num in nums:
+        #     sums += num
+        # return target - sums
+
         n = len(nums)
-        target = (n*(n+1))//2
-        sums = 0
-        for num in nums:
-            sums += num
-        return target - sums
+        return (n*(n+1)//2) - sum(nums)
