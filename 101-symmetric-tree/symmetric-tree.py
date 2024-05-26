@@ -11,8 +11,7 @@ class Solution:
     def symmetric(self, root1, root2):
         if not root1 or not root2:
             return root1 == root2
+        if root1.val != root2.val:
+            return False
         else:
-            if root1.val != root2.val:
-                return False
-            else:
-                return self.symmetric(root1.left, root2.right) and self.symmetric(root1.right, root2.left)
+            return self.symmetric(root1.left, root2.right) and self.symmetric(root1.right, root2.left)
