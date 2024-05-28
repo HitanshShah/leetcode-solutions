@@ -4,6 +4,9 @@ class Solution:
         dp[0] = 0
         coins.sort()
         for i in range(1,len(dp)):
+            if i in coins:
+                dp[i] = 1
+                continue
             for coin in coins:
                 if coin > i:
                     break
