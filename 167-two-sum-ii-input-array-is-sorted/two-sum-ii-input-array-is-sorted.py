@@ -3,9 +3,10 @@ class Solution:
         start = 0
         end = len(numbers)-1
         while start < end:
-            if numbers[start] + numbers[end] > target:
+            summ = numbers[start] + numbers[end]
+            if summ > target:
                 end-=1
-            elif numbers[start] + numbers[end] < target:
+            elif summ < target:
                 start+=1
             else:
                 return [start+1, end+1]
