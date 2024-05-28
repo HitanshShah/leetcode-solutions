@@ -2,8 +2,7 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         pre = 1
         post = 1
-        ans = [0]*len(nums)
-        ans[0] = pre
+        ans = [1]*len(nums)
         for i in range(0,len(nums)-1):
             # if i == len(nums)-1:
             #     continue
